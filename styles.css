@@ -1,0 +1,689 @@
+/* General Styling for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4faff; /* Light background for the website */
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: #004d66; /* Dark teal for the nav background */
+    color: white;
+    width: 55px; /* Initial collapsed width of the navigation */
+    height: 100vh; /* Full height for vertical navigation */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the list inside the navigation */
+nav ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    width: 100%; /* Full width for the nav items */
+}
+
+/* Styling for each list item in the navigation */
+nav ul li {
+    width: 100%; /* Full width for each nav item */
+    text-align: left;
+    padding: 15px 0px; /* Padding for better spacing */
+}
+
+/* Styling for each navigation link */
+nav a {
+    color: white; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Center icons and text vertically */
+    padding: 10px;
+    background-color: #004d66; /* Match background color */
+    border-left: 5px solid transparent; /* Left border for hover effect */
+    transition: background-color 0.3s, border-left-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    background-color: #006680; /* Brighter teal on hover */
+    border-left-color: #33cccc; /* Light blue border on hover */
+}
+
+/* Main Content Styling */
+main {
+    margin-left: 220px; /* Adjust for side navigation space */
+    padding: 40px;
+    transition: margin-left 0.3s; /* Smooth transition when nav expands */
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #004d66; /* Consistent teal for headings */
+}
+
+/* Paragraph Styling */
+p {
+    line-height: 1.6; /* Better readability with line spacing */
+}
+
+/* Section Styling (applied to all content sections) */
+section {
+    background-color: white; /* White background for sections */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners for visual appeal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004d66; /* Consistent footer background */
+    color: white; /* White text for contrast */
+}
+
+/* Form Input and Textarea Styling */
+input, textarea {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; /* Limit width for better layout */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+/* Slide-out Navigation Styling */
+.slide-out-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55px; /* Collapsed width of the slide-out navigation */
+    height: 100vh;
+    background-color: #004d66;
+    transition: width 0.3s; /* Smooth sliding effect */
+    z-index: 1000; /* Ensure nav stays on top */
+}
+
+/* Expanded width on hover */
+.slide-out-nav:hover {
+    width: 125px; /* Expanded width */
+}
+
+/* Navigation List Styling */
+.slide-out-nav ul {
+    list-style: none; /* No bullets */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Each nav item */
+.slide-out-nav ul li {
+    margin: 20px 0; /* Spacing between nav items */
+}
+
+/* Link inside the slide-out navigation */
+.slide-out-nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Icon inside the nav */
+.slide-out-nav i {
+    font-size: 1.5em;
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Text inside the nav */
+.slide-out-nav span {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+/* Show text when nav expands */
+.slide-out-nav:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Adjust the main content when the nav is expanded */
+main {
+    margin-left: 125px; /* Main content offset for the expanded nav */
+}
+
+/* Adjust content with expanded navigation */
+.slide-out-nav:hover ~ main {
+    margin-left: 125px;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .slide-out-nav {
+        width: 50px; /* Collapse the nav further on smaller screens */
+    }
+
+    .slide-out-nav:hover {
+        width: 125px; /* Expanded state on smaller screens */
+    }
+
+    main {
+        margin-left: 50px; /* Adjust main content for smaller screens */
+    }
+
+    .slide-out-nav:hover ~ main {
+        margin-left: 125px;
+    }
+}
+
+/* Portal Page Styling (for portal-like home pages) */
+.portal {
+    text-align: center;
+}
+
+.portal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+/* Styling for each portal link */
+.portal-item {
+    background-color: #e6f7ff; /* Light blue for consistency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px; /* Control the size of each link box */
+}
+
+/* Button Styling */
+button {
+    background-color: #004d66;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #006680; /* Brighter teal on hover */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004d66;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* Poetry Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Styling for each poetry entry */
+/* Hiding the poem content initially */
+.hidden {
+    display: none;
+}
+
+/* Hover effect for poetry-entry */
+/* Hiding the poem content initially */
+.poem-content {
+    max-height: 0; /* Collapsed height */
+    opacity: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth transition for height and opacity */
+}
+
+/* Hover effect for poetry-entry */
+.poetry-entry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #e6f7ff; /* Light blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover animation */
+}
+
+.poetry-entry:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* Poem titles */
+.poetry-entry h1 {
+    font-size: 1.5em;
+    width: 150px; /* Fixed width for titles */
+}
+
+/* Poem content */
+.poetry-entry p {
+    flex: 1;
+    margin: 0;
+    padding-left: 15px;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .poetry-entry {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .poetry-entry h1 {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        position: static;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2em; /* Adjust heading size for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on mobile */
+        padding: 10px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+}
+
+/* contact page */
+/* Improved Form Styling */
+form {
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px; /* Wider form fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Improved readability */
+}
+
+button {
+    background-color: #004d66;
+    color: white;
+    padding: 12px 24px; /* Larger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #006680; /* Brighter teal on hover */
+}
+
+/* Social Links Styling */
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #004d66;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #006680;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4faff; /* Light background */
+}
+
+header {
+    background-color: #004d66;
+    color: white;
+    width: 55px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide-out Navigation */
+.slide-out-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55px; /* Collapsed */
+    height: 100vh;
+    background-color: #004d66;
+    transition: width 0.3s ease;
+}
+
+.slide-out-nav:hover {
+    width: 125px; /* Expanded on hover */
+}
+
+/* Navigation List */
+.slide-out-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-out-nav ul li {
+    margin: 20px 0;
+}
+
+.slide-out-nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.slide-out-nav a:hover {
+    background-color: #006680;
+}
+
+/* Embed PDF */
+.pdf-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+main {
+    margin-left: 70px;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    .slide-out-nav {
+        width: 50px;
+    }
+
+    .slide-out-nav:hover {
+        width: 125px;
+    }
+
+    main {
+        margin-left: 50px;
+    }
+}
+
+/* Form Styling */
+input, textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #004d66;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #006680;
+}
+
+/* About Page Styling */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.about-container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #004d66;
+    margin-bottom: 40px;
+}
+
+/* Flexbox layout for the content sections */
+.about-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styling for subtle images */
+.about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.about-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content.reverse {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        margin-bottom: 20px;
+    }
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4faff; /* Light background */
+}
+
+header {
+    background-color: #004d66;
+    color: white;
+    width: 55px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-left: 70px;
+    padding: 40px;
+}
+
+/* Welcome Section Styling */
+#welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#welcome-section h1 {
+    font-size: 3em;
+    color: #004d66;
+}
+
+#welcome-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Explore Section Styling */
+#explore-section {
+    background-color: #e6f7ff; /* Light blue background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#explore-section h2 {
+    font-size: 2.5em;
+    color: #004d66;
+    margin-bottom: 40px;
+}
+
+.explore-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.explore-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.explore-item {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.explore-item i {
+    font-size: 3em;
+    color: #004d66;
+    margin-bottom: 10px;
+}
+
+.explore-item h3 {
+    font-size: 1.5em;
+    color: #004d66;
+    margin-bottom: 10px;
+}
+
+.explore-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d66;
+    color: white;
+}

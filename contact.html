@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="slide-out-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
+                <li><a href="poetry.html"><i class="fas fa-feather"></i><span>Poetry</span></a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <form action="https://formspree.io/f/xeoqjlew" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>            
+
+            <div class="social-links">
+                <p>Follow me on social media or reach out through email:</p>
+                <ul>
+                    <li>Email: <a href="mailto:BenEKaup@gmail.com">BenEKaup@gmail.com</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/ben_kaup/" target="_blank">@ben_kaup</a></li>
+                    <li>Twitter: <a href="https://x.com/Not_Kelpy" target="_blank">@Not_Kelpy</a></li>
+                    <li>Look at itch.io page and my first ever game: <a href="https://kelpyneedssleep.itch.io/ex-gf-promposal-showcase" target="_blank">kelpyneedssleep</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Benjamin Kaup. All rights reserved.</p>
+    </footer>
+</body>
+</html>

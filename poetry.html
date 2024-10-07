@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Poetry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="slide-out-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
+                <li><a href="poetry.html"><i class="fas fa-feather"></i><span>Poetry</span></a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="portfolio">
+            <div class="gallery">
+                <!-- Poetry Entries -->
+                <div class="poetry-entry" onclick="togglePoem(this)">
+                    <h1>All Provide</h1>
+                    <p class="poem-content">The Ocean, violent and vengeful,<br>can never meet the still serenity of a pond.<br>Like a slow sloping hill, ever envious of the grand and gallant Mountain.<br>But all have their merits,<br>The Ocean, seas of exploration and discovery for those in search.<br>A pond, connecting, teaching, inviting those to join the web of life.<br>The Mountain, ever taunting, always challenging those daring enough.<br>And finally, a gentle hill, constantly comforting, relaxing, and resting those ready.<br>All separate, all opposite, yet none lesser, all connected, all equal, all provide.</p>
+                </div>
+
+                <div class="poetry-entry" onclick="togglePoem(this)">
+                    <h1>If We'd Never</h1>
+                    <p class="poem-content">If we never met,<br>How would our lives differ?<br>If we never loved,<br>How would my eyes shimmer?<br>If we never had to end,<br>How would I have grown?<br>If we never missed,<br>How would I have ever flown?<br><br>If we never kissed,<br>How would i now exist.</p>
+                </div>
+
+                <div class="poetry-entry" onclick="togglePoem(this)">
+                    <h1>Fuscian</h1>
+                    <p class="poem-content">When all crumbles away,<br>what will be left to decay?<br>If no one is here to observe,<br>what is left to preserve?<br>When all is estrange,<br>how will the universe change?<br>As time takes hold,<br>all turns old.</p>
+                </div>
+
+                <div class="poetry-entry" onclick="togglePoem(this)">
+                    <h1>To Fly</h1>
+                    <p class="poem-content">I envision hubris, as wax wings daring to embrace the sun.<br>I wonder, is it so wrong—to fly?<br>To be free?<br>To want more?<br>To trespass into the domain of the gods?<br>For if the gods made us in their image,<br>why may we not inhabit the same painting?<br><br>Why must the gods hate us so, for desires that they taught us, they entrusted to us, they dangled in front of us?<br><br>Is it so wrong to want to fall?<br>For if the gods can sear the skin of such a hapless boy,<br>for the simple sin of joining their feast,<br>then why don’t we join him—in the fall?<br>For Icarus, never alone in flight—<br>only the fall.</p>
+                </div>
+
+                <div class="poetry-entry" onclick="togglePoem(this)">
+                    <h1>The Insanity, We Find In Vanity</h1>
+                    <p class="poem-content">Why is Narcissus hated so?<br>For his self-worship? self-lust? ego? hubris? pride in his own beauty?<br>Is it, his very beauty that condemns him so?<br>Or is it something deeper—his all consuming vanity. Self-love, that twists the soul, and warps the mind—<br>For what is the true difference between vanity and insanity?<br><br>Why may we not listen to the siren’s call of our own echo?<br>Where all float alongside the dancing notes, crashing into the awaiting rocks.<br>Why may we not explore the realm of our own radiance?<br>Where all bathe in the lustrous light, burning in the blazing sun.<br>Why may we not gaze into the pool of our own eyes?<br>Where all marvel at their own beauty, wasting away,<br>becoming but a flowery shadow, of a man, once blessed in beauty.<br><br>So this time I ask, what is the difference between vanity and insanity, if not one’s sense of self?<br>For in insanity you slip and lose grip on your mind,<br>while in vanity you grasp, clutching tight, until it suddenly suffocates— beneath love’s oppressive weight.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Benjamin Kaup. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to toggle poem visibility with fade effect
+        function togglePoem(entry) {
+            const poem = entry.querySelector('.poem-content');
+            if (poem.style.maxHeight) {
+                poem.style.maxHeight = null;  // Collapse
+                poem.style.opacity = 0;  // Fade out
+            } else {
+                poem.style.maxHeight = poem.scrollHeight + "px";  // Expand to full height
+                poem.style.opacity = 1;  // Fade in
+            }
+        }
+    </script>
+</body>
+</html>
